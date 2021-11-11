@@ -1,0 +1,31 @@
+﻿<Window x:Class="pract8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pract8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="590" ResizeMode="CanMinimize">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Выход" Click="выход_Click"></MenuItem>
+            <MenuItem Header="О программе" Click="справка_Click" ></MenuItem>
+        </Menu>
+        <Button x:Name="Out" Content="Вывести информацию" HorizontalAlignment="Left" Margin="11,260,0,0" VerticalAlignment="Top" Height="42" Width="253" Click="Out_Click" FontSize="18"/>
+        <TextBox x:Name="TextBox" HorizontalAlignment="Left" Margin="11,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" Height="121" IsReadOnly="True" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="269,129,0,0" Text="Вместимость пассажиров:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="InCapacity" HorizontalAlignment="Left" Margin="465,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Button x:Name="ChangeParameters" Content="Изменить" HorizontalAlignment="Left" Margin="275,170,0,0" VerticalAlignment="Top" FontSize="18" Width="310" Click="ChangeParameters_Click"/>
+        <Button x:Name="сравнить" Content="Сравнить" HorizontalAlignment="Left" Margin="276,216,0,0" VerticalAlignment="Top" FontSize="18" Width="309" Height="41" Click="сравнить_Click"/>
+        <Button x:Name="копировать" Content="Копировать первый транспорт" HorizontalAlignment="Left" Margin="276,271,0,0" VerticalAlignment="Top" FontSize="18" Width="304" Height="41" Click="копировать_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="269,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Width="168"><Run Text="Название  транспорта:"/></TextBlock>
+        <TextBox x:Name="InName" HorizontalAlignment="Left" Margin="442,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" FontSize="16"/>
+        <GroupBox>
+            <StackPanel VerticalAlignment="Top" Height="55" Margin="10,25,362,280">
+                <RadioButton x:Name="transport1" Content="Транспорт 1" FontSize="18" Checked="transport1_Checked" IsChecked="True"/>
+                <RadioButton x:Name="transport2" Content="Транспорт 2" FontSize="18" Checked="transport2_Checked"/>
+            </StackPanel>
+        </GroupBox>
+
+    </Grid>
+</Window>
