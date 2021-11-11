@@ -6,33 +6,33 @@ namespace pract8
 {
     class Bus : ITransport, ICar
     {
-        public int BusCapacity { get; set; }
+        public int Capacity { get; set; }
         public string Name { get; set; }
 
         public Bus(string name,int capacity)
         {
             Name = name;
-            BusCapacity = capacity;
+            Capacity = capacity;
         }
 
         public string ShowInformation()
         {
-            string info = "Вместимость транспорта (" + Name + ") = " + BusCapacity;
-            return info;
+            return "Вместимость транспорта (" + Name + ") = " + Capacity;
         }
 
         public int CompareTo (object object1)//Сравнение
         {
             Bus temp = (Bus)object1;
-            if(this.BusCapacity > temp.BusCapacity)
-            {
-                return 1;
-            }
-            if (this.BusCapacity < temp.BusCapacity)
-            {
-                return -1;
-            }
-            return 0;
+            return this.Capacity - temp.Capacity;
+            //if (this.BusCapacity > temp.BusCapacity)
+            //{
+            //    return 1;
+            //}
+            //if (this.BusCapacity < temp.BusCapacity)
+            //{
+            //    return -1;
+            //}
+            //return 0;
         }
 
         public Bus ShallowClone()//Поверхностное клонирование
@@ -42,9 +42,7 @@ namespace pract8
 
         public object Clone()//Полное клонирование
         {
-            Bus bus = new Bus(this.Name, this.BusCapacity);
-            //bus.Name = this.Name;
-            //bus.BusCapacity = this.BusCapacity;
+            Bus bus = new Bus(this.Name, this.Capacity);
             return bus;
         }
     }

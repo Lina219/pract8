@@ -6,9 +6,8 @@ namespace pract8
 {
     interface ITransport
     {
-        public int BusCapacity { get; set; }
+        public int Capacity { get; set; }
         public string Name { get; set; }
         public string ShowInformation();
-        public int CompareTo(object object1);
     }
 }

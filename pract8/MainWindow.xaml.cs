@@ -47,7 +47,7 @@ namespace pract8
                 }
                 else
                 {
-                    something.BusCapacity = capacity;
+                    something.Capacity = capacity;
                 }
             }
             else
@@ -76,11 +76,17 @@ namespace pract8
        
         private void сравнить_Click(object sender, RoutedEventArgs e)
         {
-            switch (_bus1.CompareTo(_bus2))
+            if (_bus1.CompareTo(_bus2) > 0)
             {
-                case 1: MessageBox.Show("Вместимость первого транспорта больше вместимости второго транспорта"); break;
-                case -1: MessageBox.Show("Вместимость второго транспорта больше вместимости первого транспорта"); break;
-                case 0: MessageBox.Show("Вместимость первого транспорта равна вместимости второго транспорта"); break;
+                MessageBox.Show("Вместимость первого транспорта больше вместимости второго транспорта");
+            }
+            if (_bus1.CompareTo(_bus2) < 0)
+            {
+                MessageBox.Show("Вместимость второго транспорта больше вместимости первого транспорта");
+            }
+            if (_bus1.CompareTo(_bus2) == 0)
+            {
+                MessageBox.Show("Вместимость первого транспорта равна вместимости второго транспорта");
             }
         }
 
