@@ -9,7 +9,7 @@ namespace pract8
         public int Capacity { get; set; }
         public string Name { get; set; }
 
-        public Bus(string name,int capacity)
+        public Bus(string name,int capacity) 
         {
             Name = name;
             Capacity = capacity;
